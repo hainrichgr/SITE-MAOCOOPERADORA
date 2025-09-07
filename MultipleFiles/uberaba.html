@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mão Cooperadora - Unidade Uberaba</title>
+  <meta name="description" content="Unidade de Educação Infantil em Uberaba, Curitiba">
+  <link rel="stylesheet" href="style.css">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');</style>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');</style>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap');</style>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="assets/faviconescola.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/faviconescola.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Preloader from Uiverse.io -->
+<div id="preloader">
+  <div class="loader">
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+  </div>
+</div>
+<!-- End Preloader -->
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="social-icons">
+      <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://wa.me/5541985228474?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20escola." aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/maocooperadorauberaba/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <!-- Header -->
+   
+<header class="main-header">
+  <!-- Logo -->
+  <a href="index.html" class="logo">
+    <img src="assets/logopngnofund.png" alt="Mão Cooperadora">
+  </a>
+
+  <!-- 1) Botão “hambúrguer” -->
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <!-- 2) Menu Desktop (links para seções internas) -->
+  <nav class="nav-desktop">
+    <ul class="nav-menu">
+      <li><a href="index.html">INÍCIO</a></li>
+      <li><a href="unidades.html">UNIDADES</a></li>
+       <li class="dropdown">
+          <a>
+            A Escola 
+            <img src="assets/down-arrow.png" alt="seta para baixo" class="seta-icon" />
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#tour-virtual">Tour Virtual</a></li>
+            <li><a href="propostapedagogica.html">PROPOSTA PEDAGÓGICA</a></li>
+          </ul>
+        </li>
+      <li><a href="historiamc.html">QUEM SOMOS</a></li>
+      <li><a href="#valores">VALORES</a></li>
+      <li><a href="#cardapio">CARDÁPIO</a></li>
+      <li><a href="#galeria">FOTOS</a></li>
+  </nav>
+
+  <!-- 3) Botão “X” de fechar (invisível até o menu abrir) -->
+  <button id="closeMenu" class="close-menu" aria-label="Fechar menu">✕</button>
+
+  <!-- 4) Overlay (fundo semitransparente, invisível até ativar) -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- 5) Menu Mobile (links para páginas separadas) -->
+  <nav class="nav-mobile">
+    <ul>
+      <li><a href="index.html">INÍCIO</a></li>
+      <li><a href="historiamc.html">QUEM SOMOS</a></li>
+     <li><a href="unidades.html">UNIDADES</a></li>
+      <li><a href="#cardapio">CARDÁPIO</a></li>
+      <li><a href="propostapedagogica.html">PROPOSTA PEDAGÓGICA</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+
+        <a href="https://wa.me/5541985228474?text=Ol%C3%A1!%20Vim%20pelo%20site%20e%20gostaria%20de%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20escola." 
+  class="whatsapp-icon" 
+  target="_blank" 
+  rel="noopener" 
+  aria-label="Agendar visita pelo WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="48" height="48" fill="#25D366">
+    <path d="M16 0C7.163 0 0 7.163 0 16c0 2.837.74 5.506 2.031 7.844L0 32l8.406-2.031A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.5c-2.625 0-5.063-.75-7.156-2.125l-.5-.313-4.969 1.219 1.313-4.844-.344-.531C3.75 21.063 3 18.625 3 16 3 8.813 8.813 3 16 3s13 5.813 13 13-5.813 13-13 13zm7.219-9.219c-.406-.219-2.406-1.188-2.781-1.313-.375-.125-.656-.219-.938.219-.281.438-1.094 1.313-1.344 1.594-.25.281-.5.313-.906.094-.406-.219-1.719-.625-3.281-1.969-1.219-1.094-2.031-2.438-2.281-2.844-.25-.406-.031-.625.188-.844.188-.188.406-.5.594-.75.188-.25.25-.438.375-.719.125-.281.063-.531-.031-.75-.094-.219-.938-2.25-1.281-3.094-.344-.844-.688-.719-.938-.719h-.781c-.25 0-.656.094-1 .438s-1.313 1.281-1.313 3.125c0 1.844 1.344 3.625 1.531 3.875.188.25 2.625 4 6.375 5.625.891.375 1.594.594 2.125.75.891.281 1.7.25 2.344.156.719-.094 2.406-.969 2.75-1.906.344-.938.344-1.75.25-1.906-.094-.156-.344-.25-.75-.438z"/>
+  </svg>
+</a>
+
+<!-- Banners -->
+ <div class="banner-rotativo">
+  <div class="banner-imagem">
+    <!-- Imagem clicável - A Escola sem link -->
+    <img src="assets/Mão Cooperadora (1).png" alt="Banner A Escola" id="bannerImg">
+    
+    <!-- Link invisível sobre a imagem -->
+    <a href="#" class="banner-link" id="bannerLink"></a>
+  </div>
+
+  <div class="banner-abas">
+    <button class="aba-btn cor-escola active" onclick="trocarBanner(0)">A Escola</button>
+    <button class="aba-btn cor-cardapio" onclick="trocarBanner(2)">Cardápio</button>
+  </div>
+</div>
+
+    <!-- Sobre Educação Infantil -->
+    <section class="sobre-educacao">
+      <div class="container">
+        <div class="sobre-content">
+          <div class="sobre-texto">
+            <h2>Centro de Educação Infantil Mão Cooperadora-Uberaba</h2>
+            <p>O Centro de Educação Infantil <strong>Mão Cooperadora</strong>  - Uberaba é mantida pelas Obras Sociais e Educacionais da Igreja de Deus no Brasil, entidade civil, sem fins lucrativos, fundada em 10 de junho de 1975.</p>
+            <p>A mesma é filiada à Igreja de Deus no Brasil, sendo, porém, independente e autônoma, mantendo em suas atividades os mesmos princípios e tendo por finalidade principal a assistência social através de métodos cristãos, sem qualquer discriminação de cor, sexo, nacionalidade, credo religioso ou político.</p>
+            <p>O Centro de Educação Infantil a <strong>Mão Cooperadora</strong> - Uberaba iniciou suas atividades, de forma extra-oficial, no dia 25 de janeiro de 1985 atendendo cerca de quarenta crianças, na Rua Presidente Wilson, nº 400 no Bairro de Uberaba, sob iniciativa do Pastor Moisés e Ilani de Cunha de Lima. No ano de 1988 a Sra Rosemari Randing dirigiu a Unidade. Em 1989 Claudia Schwambach Hahner assumiu a Direção do trabalho.</p>
+            <p>Em 03 de abril de 1992, foram inauguradas as novas instalações no Bairro Uberaba, situada na Rua Rodolfo Bernardelli, 545, com a finalidade de atender crianças de três a seis anos como um Centro de Educação Infantil.</p>
+            <p>No ano de 1996 Magda Sueli Steingräber Schwambach passou a dirigir o trabalho. Hoje, atendem-se cerca de 130 crianças de 02 a 05 anos com a mesma finalidade de educar para a cidadania, conforme prescrito nos princípios filosóficos da Mantenedora.</p>
+            <p>Há 30 anos a <strong>Mão Cooperadora</strong> atende a comunidade e tem se tornado um referencial  no bairro do Uberaba.</p>
+        </div>
+          <div class="sobre-info">
+            <div class="info-box">
+              <i class="fas fa-user-tie"></i>
+              <h3>Diretora</h3>
+              <p>Magda Schwambach</p>
+            </div>
+            <div class="info-box">
+              <i class="fas fa-phone"></i>
+              <h3>Telefone</h3>
+              <p>(41) 3276-0114</p>
+            </div>
+            <div class="info-box">
+              <i class="fas fa-envelope"></i>
+              <h3>E-mail</h3>
+              <p>uberaba@maocooperadora.org</p>
+            </div>
+            <div class="info-box">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Endereço</h3>
+              <p>Rua Rodolfo Bernardelli, 545 - Uberaba, Curitiba - PR, 81580-010</p>
+            </div>
+            <a href="https://maps.app.goo.gl/LoGJy2iVKWnSgikx5" class="btn-map" target="_blank">
+              <i class="fas fa-directions"></i> Como chegar
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Valores -->
+    <section id="valores" class="valores">
+      <div class="container">
+        <h2>Nossos Valores</h2>
+        <div class="valores-grid">
+          <div class="valor-card">
+            <i class="fas fa-heart"></i>
+            <h3>Respeito</h3>
+            <p> Cultivamos o respeito por todas as pessoas, reconhecendo a dignidade de cada indivíduo como criação divina.</p>
+          </div>
+
+          <div class="valor-card">
+        <i class="fas fa-church"></i>
+        <h3>Fé Cristã</h3>
+        <p>Baseamos nossa educação nos princípios cristãos, formando cidadãos com valores sólidos e caráter íntegro.</p>
+      </div>
+          
+          <div class="valor-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Ética</h3>
+            <p>Agimos com integridade em todas as nossas relações, seguindo os princípios bíblicos de justiça e honestidade.</p>
+          </div>
+          
+          <div class="valor-card">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Inovação</h3>
+            <p>Buscamos métodos educacionais criativos e tecnologias atualizadas, alinhando progresso com valores eternos.</p>
+        </div>
+          
+          <div class="valor-card">
+            <i class="fas fa-hands-helping"></i>
+            <h3>Solidariedade</h3>
+            <p>Praticamos o amor ao próximo através de ações sociais e formação de uma comunidade escolar acolhedora.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- Seção Cardápio com Vídeo -->
+<section class="cardapio-section" id="cardapio">
+  <div class="video-container">
+    <video autoplay muted loop playsinline webkit-playsinline>
+      <source src="assets/cardapiovideo.mp4" type="video/mp4">
+      <!-- Fallback para navegadores que não suportam vídeo -->
+      Seu navegador não suporta vídeos HTML5. <a href="assets/cardapio.pdf">Acesse o cardápio aqui</a>.
+    </video>
+    
+    <div class="video-overlay"></div>
+    
+    <div class="cardapio-content">
+      <h2 class="cardapio-title">Cardápio Escolar</h2>
+      <p class="cardapio-description">Alimentação saudável e balanceada</p>
+      <a href="assets/cardapiopiraquara.pdf" class="cardapio-button" target="_blank">
+        Ver Cardápio Completo
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!-- Tour Virtual -->
+    <section class="tour-virtual" id="tour-virtual">
+      <div class="container">
+        <h2>Tour Virtual</h2>
+        <div class="video-container">
+          <div class="video-placeholder">
+            <i class="fas fa-video"></i>
+            <p>Em breve nosso tour virtual</p>
+            <!-- Espaço reservado para o vídeo do YouTube -->
+            <!-- <iframe src="https://www.youtube.com/embed/..." frameborder="0" allowfullscreen></iframe> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria de Fotos -->
+    <section class="galeria" id="galeria">
+      <div class="container">
+        <h2>Galeria de Fotos</h2>
+        <div class="galeria-grid">
+          <img src="assets/olimpiadas.png" alt="Atividades Infantil">
+          <img src="assets/olimpiadas.png" alt="Espaços Educacionais">
+          <img src="assets/olimpiadas.png" alt="Brinquedoteca">
+          <img src="assets/olimpiadas.png" alt="Parque Infantil">
+          <img src="assets/olimpiadas.png" alt="Aula de Música">
+          <img src="assets/olimpiadas.png" alt="Eventos Escolares">
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+   <!-- Footer Redes Sociais -->
+  <footer class="footer-redes">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://www.facebook.com/maocooperadorauberaba" target="_blank" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/maocooperadorauberaba/" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:uberaba@maocooperadora.org" class="social-icon email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            </div>
+            </div>
+            </footer>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/bonecosmc.png" alt="Mão Cooperadora" class="footer-logo">
+          <p>“Ensina a criança no caminho em que deve andar, e, ainda quando for velho, não se desviará dele.” Provérbios 22:6.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Unidades</h3>
+          <ul>
+            <li><a href="piraquara.html">Piraquara Educação Infantil</a></li>
+            <li><a href="fundamental.html">Piraquara Ensino Fundamental</a></li>
+            <li><a href="uberaba.html">Uberaba</a></li>
+            <li><a href="lindoia.html">Lindoia</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Links Úteis</h3>
+          <ul>
+            <li><a href="historiamc.html">Nossa História</a></li>
+            <li><a href="#valores">Valores</a></li>
+            <li><a href="index.html#diferenciais">Diferenciais</a></li>
+            <li><a href="https://www.igrejadedeusconid.com/inicio">Conheça a Igreja de Deus</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contato</h3>
+          <ul>
+            <li><i class="fas fa-phone"></i> (41) 3276-0114</li>
+            <li><i class="fas fa-envelope"></i> uberaba@maocooperadora.org</li>
+            <li><i class="fas fa-map-marker-alt"></i> Rua Rodolfo Bernardelli, 545 - Uberaba, Curitiba - PR, 81580-010</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Mão Cooperadora. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Preloader HTML -->
+  <div id="preloader" class="hidden">
+    <div class="spinner"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

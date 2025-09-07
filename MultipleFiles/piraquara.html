@@ -1,0 +1,529 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mão Cooperadora - Piraquara Educação Infantil</title>
+ <meta property="og:video" content="https://maocooperadora.org/assets/video-cardapio.mp4">
+  <meta name="description" content="Unidade de Educação Infantil em Piraquara">
+  <link rel="stylesheet" href="style.css">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');</style>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');</style>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap');</style>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="assets/faviconescola.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/faviconescola.ico" type="image/x-icon">
+</head>
+
+<body>
+<!-- Preloader from Uiverse.io -->
+<div id="preloader">
+  <div class="loader">
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+  </div>
+</div>
+<!-- End Preloader -->
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/maocooperadorauberaba" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="https://wa.me/5541985341447?text=Ol%C3%A1!Vim%20pelo%20site%20e%20gostaria%20de%20ter%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20escola." aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/escola_mc/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <!-- Header -->
+ <header class="main-header">
+  <!-- Logo -->
+  <a href="index.html" class="logo">
+    <img src="assets/logopngnofund.png" alt="Mão Cooperadora">
+  </a>
+
+  <!-- 1) Botão “hambúrguer” -->
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <!-- 2) Menu Desktop (links para seções internas) -->
+  <nav class="nav-desktop">
+    <ul class="nav-menu">
+      <li><a href="index.html">INÍCIO</a></li>
+      <li><a href="socials.html">REDES SOCIAIS</a></li>
+       <li class="dropdown">
+          <a>
+            A Escola 
+            <img src="assets/down-arrow.png" alt="seta para baixo" class="seta-icon" />
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="unidades.html">UNIDADES</a></li>
+            <li><a href="contraturno.html">CONTRATURNO</a></li>
+            <li><a href="#aulas-extras">Aulas Extras-Curriculares</a></li>
+            <li><a href="listamateriais.html">Lista de Materiais</a></li>
+            <li><a href="#tour-virtual">Tour Virtual</a></li>
+            <li><a href="propostapedagogica.html">PROPOSTA PEDAGÓGICA</a></li>
+          </ul>
+        </li>
+      <li><a href="historiamc.html">QUEM SOMOS</a></li>
+      <li><a href="#cardapio">CARDÁPIO</a></li>
+      <li><a href="#galeria">FOTOS</a></li>
+      <li><a href="#matriculas">MATRÍCULAS</a></li>
+  </nav>
+
+  <!-- 3) Botão “X” de fechar (invisível até o menu abrir) -->
+  <button id="closeMenu" class="close-menu" aria-label="Fechar menu">✕</button>
+
+  <!-- 4) Overlay (fundo semitransparente, invisível até ativar) -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- 5) Menu Mobile (links para páginas separadas) -->
+  <nav class="nav-mobile">
+    <ul>
+      <li><a href="index.html">INÍCIO</a></li>
+      <li><a href="historiamc.html">QUEM SOMOS</a></li>
+      <li><a href="#valores">VALORES</a></li>
+
+      <li class="dropdown">
+          <a>
+            AULAS EXTRACURRICULARES 
+            <img src="assets/down-arrow.png" alt="seta para baixo" class="seta-icon" />
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="ballet.html">BALLET</a></li>
+            <li><a href="futebol.html">FUTEBOL</a></li>
+            <li><a href="jazz.html">JAZZ</a></li>
+          </ul>
+        </li>
+      <li><a href="unidades.html">UNIDADES</a></li>
+      <li><a href="listamateriais.html">LISTA DE MATERIAIS</a></li>
+      <li><a href="#cardapio">CARDÁPIO</a></li>
+      <li><a href="propostapedagogica.html">PROPOSTA PEDAGÓGICA</a></li>
+      <li><a href="socials.html">REDES SOCIAIS</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+
+        <a href="https://wa.me/5541985341447?text=Ol%C3%A1!Vim%20pelo%20site%20e%20gostaria%20de%20ter%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20escola." 
+   class="whatsapp-icon" 
+   target="_blank" 
+   rel="noopener" 
+   aria-label="Agendar visita pelo WhatsApp">
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" width="48" height="48" fill="#25D366">
+    <path d="M16 0C7.163 0 0 7.163 0 16c0 2.837.74 5.506 2.031 7.844L0 32l8.406-2.031A15.94 15.94 0 0016 32c8.837 0 16-7.163 16-16S24.837 0 16 0zm0 29.5c-2.625 0-5.063-.75-7.156-2.125l-.5-.313-4.969 1.219 1.313-4.844-.344-.531C3.75 21.063 3 18.625 3 16 3 8.813 8.813 3 16 3s13 5.813 13 13-5.813 13-13 13zm7.219-9.219c-.406-.219-2.406-1.188-2.781-1.313-.375-.125-.656-.219-.938.219-.281.438-1.094 1.313-1.344 1.594-.25.281-.5.313-.906.094-.406-.219-1.719-.625-3.281-1.969-1.219-1.094-2.031-2.438-2.281-2.844-.25-.406-.031-.625.188-.844.188-.188.406-.5.594-.75.188-.25.25-.438.375-.719.125-.281.063-.531-.031-.75-.094-.219-.938-2.25-1.281-3.094-.344-.844-.688-.719-.938-.719h-.781c-.25 0-.656.094-1 .438s-1.313 1.281-1.313 3.125c0 1.844 1.344 3.625 1.531 3.875.188.25 2.625 4 6.375 5.625.891.375 1.594.594 2.125.75.891.281 1.7.25 2.344.156.719-.094 2.406-.969 2.75-1.906.344-.938.344-1.75.25-1.906-.094-.156-.344-.25-.75-.438z"/>
+  </svg>
+</a>
+
+<!-- Banners -->
+ <div class="banner-rotativo">
+  <div class="banner-imagem">
+    <!-- Imagem clicável - A Escola sem link -->
+    <img src="assets/Mão Cooperadora (1).png" alt="Banner A Escola" id="bannerImg">
+    
+    <!-- Link invisível sobre a imagem -->
+    <a href="#" class="banner-link" id="bannerLink"></a>
+  </div>
+
+  <div class="banner-abas">
+    <button class="aba-btn cor-escola active" onclick="trocarBanner(0)">A Escola</button>
+    <button class="aba-btn cor-bolsa" onclick="trocarBanner(1)">Bolsas de Estudo</button>
+    <button class="aba-btn cor-cardapio" onclick="trocarBanner(2)">Cardápio</button>
+  </div>
+</div>
+      
+    <!-- Sobre Educação Infantil -->
+    <section class="sobre-educacao" id="sobre">
+      <div class="container">
+        <div class="sobre-content">
+          <div class="sobre-texto">
+            <h2>Centro de Educação Infantil Mão Cooperadora-Piraquara</h2>
+            <p>O Centro de Educação Infantil <strong>Mão Cooperadora</strong> é mantido pelas Obras Sociais e Educacionais da Igreja de Deus no Brasil, associação civil de direito privado sem fins lucrativos ou econômicos, fundada em 10 de junho de 1975.</p>
+            <p>A mesma é filiada à Igreja de Deus no Brasil, sendo, porém, independente e autônoma, mantendo em suas atividades os mesmos princípios e tendo por finalidade principal a assistência social através de métodos cristãos, sem qualquer discriminação de cor, sexo, nacionalidade, credo religioso ou político. Teve seu início na garagem do Instituto Teológico "Boa Terra", com ênfase no atendimento às crianças que viviam em condições de vulnerabilidade social. A criação oficial de Piraquara deu-se em 28/06/1977.</p>
+            <p>O trabalho social com crianças foi ampliado e passou a funcionar provisoriamente numa chácara próxima, enquanto se construía a sede própria na Rua Joaquim Simões, sob a liderança do Pr Edgar Henke. A nova sede em Piraquara foi inaugurada em 12/03/1979 e teve o apoio do KINDERHILFSWERK - Obra Social da Igreja de Deus da Alemanha, da FUNABEM, da Prefeitura de Piraquara e de voluntários da comunidade.</p>
+            <p>A primeira coordenadora da Creche e CEMIC foi a Sra Lillian Weidmann Witt. Posteriormente teve como coordenadores: Sra Else Plötz, Sra Marlene Greiner, Pr Guinter Muller, Sra Vera Velocinda Seibel, Sra Elvira Rodrigues Jacinto, Sra Dagmar Prochnow Scheffelmayer, Vanessa Henning Ramalho, Claudia Rodrigues Lima Mink e Sra Suzana Schroeder Quadros.</p>
+            <p>A partir de janeiro de 2017 até o momento, a Unidade está sendo dirigida pela Rosyane Ferreira Pinto Grahl. Há mais de 35 anos a <strong>Mão Cooperadora</strong> atende crianças de 03 a 05 anos com a mesma finalidade de educar para a cidadania, conforme prescrito nos princípios filosóficos da Mantenedora. Hoje atende cerca de 200 crianças e tem se tornado um referencial no município de Piraquara.</p>
+          </div>
+          <div class="sobre-info">
+            <div class="info-box">
+              <i class="fas fa-user-tie"></i>
+              <h3>Diretora</h3>
+              <p>Rosyane F. P. Grahl</p>
+            </div>
+            <div class="info-box">
+              <i class="fas fa-phone"></i>
+              <h3>Telefone</h3>
+              <p>(41) 1234-5678</p>
+            </div>
+            <div class="info-box">
+              <i class="fas fa-envelope"></i>
+              <h3>E-mail</h3>
+              <a href="mailto:cei@piraquara.maocooperadora.org">cei@piraquara.maocooperadora.org</a>
+            </div>
+            <div class="info-box">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Endereço</h3>
+              <p>R. Joaquim Simões, 666 - Jardim Tropical
+Piraquara - PR
+83314-010</p>
+            </div>
+            <a href="https://maps.app.goo.gl/pKz9QrRf9H3m9Goa6" class="btn-map" target="_blank">
+              <i class="fas fa-directions"></i> Como chegar
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Contraturno -->
+    <aside class="barra-formacao">
+  <div class="conteudo-barra">
+    <div class="texto-barra">
+      <h3>Contraturno Mão Cooperadora</h3>
+      <p>Além da sala de aula</p>
+      <a href="contraturno.html" class="botao-proposta">Conheça o nosso contraturno</a>
+    </div>
+
+     <div class="decoracao-quebracabeca">
+      <img src="aulasextras/cubomagico.png" alt="Quebra-cabeça decorativo">
+    </div>
+
+    <div class="imagem-barra">
+      <img src="aulasextras/capacontraturno.png" alt="Crianças felizes">
+    </div>
+  </div>
+</aside>
+
+    <!-- Seção Valores -->
+    <section id="valores" class="valores">
+      <div class="container">
+        <h2>Nossos Valores</h2>
+        <div class="valores-grid">
+          <div class="valor-card">
+            <i class="fas fa-heart"></i>
+            <h3>Respeito</h3>
+            <p> Cultivamos o respeito por todas as pessoas, reconhecendo a dignidade de cada indivíduo como criação divina.</p>
+          </div>
+
+          <div class="valor-card">
+        <i class="fas fa-church"></i>
+        <h3>Fé Cristã</h3>
+        <p>Baseamos nossa educação nos princípios cristãos, formando cidadãos com valores sólidos e caráter íntegro.</p>
+      </div>
+          
+          <div class="valor-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Ética</h3>
+            <p>Agimos com integridade em todas as nossas relações, seguindo os princípios bíblicos de justiça e honestidade.</p>
+          </div>
+          
+          <div class="valor-card">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Inovação</h3>
+            <p>Buscamos métodos educacionais criativos e tecnologias atualizadas, alinhando progresso com valores eternos.</p>
+        </div>
+          
+          <div class="valor-card">
+            <i class="fas fa-hands-helping"></i>
+            <h3>Solidariedade</h3>
+            <p>Praticamos o amor ao próximo através de ações sociais e formação de uma comunidade escolar acolhedora.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Diferenciais Inclusos -->
+   <!-- Diferenciais Inclusos -->
+<section class="aulas-extras" id="aulas-extras">
+  <h2 class="secao-titulo">Diferenciais Inclusos</h2>
+  <div class="carrossel-wrapper diferenciais">
+    <div class="carrossel-track">
+      <div class="aula-card">
+        <div class="aula-background">
+          <img src="aulasextras/musicalização (2).JPG" alt="Musicalização">
+        </div>
+        <div class="aula-conteudo">
+          <h3>Musicalização</h3>
+          <p>Ritmo e Melodia</p>
+        </div>
+      </div>
+      <div class="aula-card">
+        <div class="aula-background">
+          <img src="aulasextras/momentocomdeus.png" alt="Cultinhos">
+        </div>
+        <div class="aula-conteudo">
+          <h3>Momentos com Deus</h3>
+          <p>Reflexões Semanais</p>
+        </div>
+      </div>
+      <div class="aula-card">
+        <div class="aula-background">
+          <img src="aulasextras/projetos.jpeg" alt="Teatro">
+        </div>
+        <div class="aula-conteudo">
+          <h3>Projetos Artísticos</h3>
+          <p>Expressão e Transformação</p>
+        </div>
+      </div>
+    </div> <!-- Fechamento do carrossel-track -->
+  </div> <!-- Fechamento do carrossel-wrapper -->
+  <div class="diferenciais-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+ <!-- Aulas Extras -->
+<section class="aulas" id="aulas-extras">
+  <div class="container">
+    <h2 class="secao-titulo">Aulas Extracurriculares</h2> 
+    <div class="aulas-grid">
+      <!-- Card Futebol -->
+    <a href="futebol.html" class="aula-card">
+  <div class="aula-background"> <!-- NEW DIV FOR BACKGROUND -->
+    <img src="aulasextras/futebolfoto1.png" alt="Aula de futebol infantil" loading="lazy">
+  </div>
+  <div class="aula-conteudo">
+    <h3>Futebol</h3>
+    <p>Esporte e Diversão</p>
+  </div>
+</a>
+
+      <!-- Card Ballet -->
+      <a href="ballet.html" class="aula-card">
+        <div class="aula-background">
+          <img src="aulasextras/balletpresent.jpeg" alt="Aula de ballet infantil" loading="lazy">
+        </div>
+        <div class="aula-conteudo">
+          <h3>Ballet</h3>
+          <p>Dança e Expressão</p> <!-- Added subtitle -->
+        </div>
+      </a>
+
+      <!-- Card Jazz -->
+      <a href="jazz.html" class="aula-card">
+        <div class="aula-background">
+          <img src="assets/editada jazz car.png" alt="Aula de jazz infantil" loading="lazy">
+        </div>
+        <div class="aula-conteudo">
+          <h3>Jazz</h3>
+          <p>Ritmo e Movimento</p> 
+        </div>
+      </a>
+      </div> 
+
+      <div class="aulas-dots">
+  <span class="dot active"></span>
+  <span class="dot"></span>
+  <span class="dot"></span>
+</div>
+  </section>
+
+
+    <!-- Lista de Materiais -->
+    <section class="lista-materiais" id="lista-materiais">
+      <div class="container">
+        <h2>Lista de Materiais</h2>
+        <div class="materiais-grid">
+          <a href="assets/lista-infantil3.pdf" class="material-card" target="_blank">
+            <i class="fas fa-book-open"></i>
+            <h3>Infantil 3</h3>
+            <p>(3 anos completos)</p>
+          </a>
+          <a href="assets/lista-infantil4.pdf" class="material-card" target="_blank">
+            <i class="fas fa-pencil-alt"></i>
+            <h3>Infantil 4</h3>
+          </a>
+          <a href="assets/lista-infantil5.pdf" class="material-card" target="_blank">
+            <i class="fas fa-ruler-combined"></i>
+            <h3>Infantil 5</h3>
+          </a>
+          <a href="assets/lista-contraturno.pdf" class="material-card" target="_blank">
+            <i class="fas fa-school"></i>
+            <h3>Contraturno</h3>
+            <p>(1° ao 5° ano)</p>
+          </a>
+        </div>
+      </div>
+    </section>
+
+<!-- Seção Cardápio com Vídeo -->
+<section class="cardapio-section" id="cardapio">
+  <div class="video-container">
+    <video autoplay muted loop playsinline webkit-playsinline>
+      <source src="assets/cardapiovideo.mp4" type="video/mp4">
+      <!-- Fallback para navegadores que não suportam vídeo -->
+      Seu navegador não suporta vídeos HTML5. <a href="assets/cardapio.pdf">Acesse o cardápio aqui</a>.
+    </video>
+    
+    <div class="video-overlay"></div>
+    
+    <div class="cardapio-content">
+      <h2 class="cardapio-title">Cardápio Escolar</h2>
+      <p class="cardapio-description">Alimentação saudável e balanceada</p>
+      <a href="cardapios/Cardapio CEI Piraquara-setembro.pdf" class="cardapio-button" target="_blank">
+        Ver Cardápio Completo
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+    <!-- Tour Virtual -->
+    <section class="tour-virtual" id="tour-virtual">
+      <div class="container">
+        <h2>Tour Virtual</h2>
+        <div class="video-container">
+          <div class="video-placeholder">
+            <i class="fas fa-video"></i>
+            <p>Em breve nosso tour virtual</p>
+            <!-- Espaço reservado para o vídeo do YouTube -->
+            <!-- <iframe src="https://www.youtube.com/embed/..." frameborder="0" allowfullscreen></iframe> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria de Fotos -->
+    <section class="galeria" id="galeria">
+      <div class="container">
+        <h2>Galeria de Fotos</h2>
+        <div class="galeria-grid">
+          <img src="assets/atvcozinha.jpeg" alt="Atividades Infantil">
+          <img src="assets/atvleitura.jpeg" alt="Espaços Educacionais">
+          <img src="assets/alcoolemgelcei.png" alt="Brinquedoteca">
+          <img src="assets/atvhorta.jpeg" alt="Parque Infantil">
+          <img src="assets/atvinstrumentoscei.jpg" alt="Aula de Música">
+          <img src="assets/saladeaula.jpeg" alt="Eventos Escolares">
+          <img src="assets/picniccei.png" alt="Eventos Escolares">
+          <img src="assets/cadeirascei.jpeg" alt="Eventos Escolares">
+        </div>
+      </div>
+    </section>
+  </main>
+
+     <!-- Matrículas -->
+<section class="matriculas" id="matriculas">
+  <div class="container">
+    <h2>Matrículas</h2>
+    <div class="matriculas-info">
+      <div class="info-card">
+        <i class="fas fa-calendar-check"></i>
+        <h4>Verifique disponibilidade de vagas</h4>
+        <p>Entre em contato para confirmar vagas em cada turma</p>
+      </div>
+
+    
+
+      <div class="info-card">
+        <i class="fas fa-question-circle"></i>
+        <h4>Dúvidas?</h4>
+        <p><i class="fas fa-phone"></i> (41) 985341447</p>
+        <p><i class="fas fa-envelope"></i> cei@piraquara.maocooperadora.org</p>
+      </div>
+    </div>
+
+    <!-- Botão WhatsApp -->
+  <!-- From Uiverse.io by OliverZeros -->
+  <div class="button-container"> 
+<button class="button button-item" onclick="window.open('https://wa.me/5541985341447?text=Ol%C3%A1!Vim%20pelo%20site%20e%20gostaria%20de%20ter%20mais%20informa%C3%A7%C3%B5es%20sobre%20a%20escola.', '_blank')">
+  <span class="button-bg">
+    <span class="button-bg-layers">
+      <span class="button-bg-layer button-bg-layer-1 -purple"></span>
+      <span class="button-bg-layer button-bg-layer-2 -turquoise"></span>
+      <span class="button-bg-layer button-bg-layer-3 -yellow"></span>
+    </span>
+  </span>
+  <span class="button-inner">
+    <span class="button-inner-static">Entre em Contato</span>
+    <span class="button-inner-hover">Entre em Contato</span>
+  </span>
+</button>
+</div>
+
+
+</section>
+
+    <!-- Footer Redes Sociais -->
+  <footer class="footer-redes">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://www.facebook.com/maocooperadora" target="_blank" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/escola_mc/" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:cei@piraquara.maocooperadora.org" class="social-icon email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            </div>
+            </div>
+            </footer>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/bonecosmc.png" alt="Mão Cooperadora" class="footer-logo">
+          <p>“Ensina a criança no caminho em que deve andar, e, ainda quando for velho, não se desviará dele.” Provérbios 22:6.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Unidades</h3>
+          <ul>
+            <li><a href="piraquara.html">Piraquara Educação Infantil</a></li>
+            <li><a href="fundamental.html">Piraquara Ensino Fundamental</a></li>
+            <li><a href="uberaba.html">Uberaba</a></li>
+            <li><a href="lindoia.html">Lindoia</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Links Úteis</h3>
+          <ul>
+            <li><a href="#historia">Nossa História</a></li>
+            <li><a href="#">Valores</a></li>
+            <li><a href="#">Diferenciais</a></li>
+            <li><a href="https://www.igrejadedeusconid.com/inicio">Conheça a Igreja de Deus</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contato</h3>
+          <ul>
+            <li><i class="fas fa-phone"></i> +55 41 3653-4584</li>
+            <li><i class="fas fa-envelope"></i> cei@piraquara.maocooperadora.org</li>
+            <li><i class="fas fa-map-marker-alt"></i> R. Joaquim Simões, 666 - Jardim Tropical, Piraquara- PR 83314-010</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; Mão Cooperadora. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Preloader HTML -->
+  <div id="preloader" class="hidden">
+    <div class="spinner"></div>
+  </div>
+
+  <script src="script.js"></script>
+
+  <script>
+  // Defina o link específico para esta página
+  configPagina.linkCardapio = 'cardapios/Cardapio CEI Piraquara-setembro.pdf';
+</script>
+
+</body>
+</html>

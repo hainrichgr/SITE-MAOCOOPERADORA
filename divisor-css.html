@@ -1,0 +1,606 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Divisor de CSS - Mão Cooperadora</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            background: linear-gradient(135deg, #f5f7fa 0%, #e4efe9 100%);
+            color: #333;
+            padding: 20px;
+            min-height: 100vh;
+        }
+        
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        header {
+            text-align: center;
+            margin-bottom: 30px;
+            padding-bottom: 20px;
+            border-bottom: 3px solid #33bbff;
+        }
+        
+        h1 {
+            color: #00283C;
+            margin-bottom: 10px;
+        }
+        
+        .description {
+            color: #666;
+            font-size: 18px;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        
+        .input-section {
+            margin-bottom: 30px;
+        }
+        
+        textarea {
+            width: 100%;
+            height: 300px;
+            padding: 20px;
+            border: 2px solid #ddd;
+            border-radius: 8px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 14px;
+            resize: vertical;
+            margin-bottom: 15px;
+            transition: border-color 0.3s;
+        }
+        
+        textarea:focus {
+            outline: none;
+            border-color: #33bbff;
+        }
+        
+        .buttons {
+            display: flex;
+            gap: 15px;
+            flex-wrap: wrap;
+        }
+        
+        button {
+            background: #00283C;
+            color: white;
+            border: none;
+            padding: 12px 25px;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+        
+        button:hover {
+            background: #33bbff;
+            transform: translateY(-2px);
+        }
+        
+        button:active {
+            transform: translateY(0);
+        }
+        
+        button.secondary {
+            background: #6c757d;
+        }
+        
+        button.secondary:hover {
+            background: #5a6268;
+        }
+        
+        .result-section {
+            display: none;
+            margin-top: 30px;
+        }
+        
+        .result-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 20px;
+            padding-bottom: 10px;
+            border-bottom: 2px solid #eee;
+        }
+        
+        .result-title {
+            color: #00283C;
+            font-size: 24px;
+        }
+        
+        .file-counter {
+            background: #33bbff;
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-weight: bold;
+        }
+        
+        .files-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+            gap: 20px;
+        }
+        
+        .file-card {
+            background: #f8f9fa;
+            border-radius: 10px;
+            padding: 20px;
+            box-shadow: 0 3px 10px rgba(0, 0, 0, 0.08);
+            transition: transform 0.3s;
+        }
+        
+        .file-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .file-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: 15px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        
+        .file-name {
+            font-weight: bold;
+            color: #00283C;
+            font-size: 18px;
+        }
+        
+        .file-content {
+            background: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-family: 'Consolas', 'Monaco', monospace;
+            font-size: 12px;
+            max-height: 200px;
+            overflow-y: auto;
+            margin-bottom: 15px;
+            border: 1px solid #eee;
+            white-space: pre-wrap;
+        }
+        
+        .file-actions {
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .copy-btn {
+            background: #28a745;
+            padding: 8px 15px;
+            font-size: 14px;
+        }
+        
+        .copy-btn:hover {
+            background: #218838;
+        }
+        
+        .instructions {
+            background: #e8f4f8;
+            padding: 20px;
+            border-radius: 10px;
+            margin-top: 30px;
+        }
+        
+        .instructions h3 {
+            color: #00283C;
+            margin-bottom: 15px;
+        }
+        
+        .instructions ol {
+            margin-left: 20px;
+        }
+        
+        .instructions li {
+            margin-bottom: 10px;
+        }
+        
+        .footer {
+            text-align: center;
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #eee;
+            color: #666;
+        }
+        
+        .notification {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #28a745;
+            color: white;
+            padding: 15px 25px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+            transform: translateX(100%);
+            transition: transform 0.3s;
+            z-index: 1000;
+        }
+        
+        .notification.show {
+            transform: translateX(0);
+        }
+        
+        @media (max-width: 768px) {
+            .buttons {
+                flex-direction: column;
+            }
+            
+            button {
+                width: 100%;
+            }
+            
+            .files-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Divisor de CSS - Mão Cooperadora</h1>
+            <p class="description">Cole seu CSS completo abaixo e divida em arquivos organizados para melhor manutenção</p>
+        </header>
+        
+        <div class="input-section">
+            <textarea id="cssCompleto" placeholder="Cole todo o conteúdo do seu style.css aqui..."></textarea>
+            
+            <div class="buttons">
+                <button onclick="dividirCSS()">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M6 10.5a.5.5 0 0 1 .5-.5h3a.5.5 0 0 1 0 1h-3a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7a.5.5 0 0 1-.5-.5zm-2-3a.5.5 0 0 1 .5-.5h11a.5.5 0 0 1 0 1h-11a.5.5 0 0 1-.5-.5z"/>
+                    </svg>
+                    Dividir CSS
+                </button>
+                <button onclick="limpar()" class="secondary">
+                    <svg width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
+                        <path d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z"/>
+                        <path fill-rule="evenodd" d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z"/>
+                    </svg>
+                    Limpar
+                </button>
+            </div>
+        </div>
+        
+        <div id="resultado" class="result-section">
+            <div class="result-header">
+                <h2 class="result-title">CSS Dividido</h2>
+                <span id="contadorArquivos" class="file-counter">0 arquivos</span>
+            </div>
+            
+            <div id="arquivosContainer" class="files-container">
+                <!-- Os arquivos serão inseridos aqui pelo JavaScript -->
+            </div>
+        </div>
+        
+        <div class="instructions">
+            <h3>Como usar os arquivos divididos:</h3>
+            <ol>
+                <li>Crie uma pasta <strong>css</strong> no seu projeto</li>
+                <li>Para cada arquivo abaixo, clique em "Copiar" e cole em um novo arquivo na pasta css</li>
+                <li>Crie um arquivo <strong>main.css</strong> com o conteúdo: 
+                    <pre style="background:#2d2d2d;color:#fff;padding:10px;border-radius:5px;margin-top:5px;">
+@import url('base.css');
+@import url('header.css');
+@import url('banners.css');
+@import url('carrossel.css');
+@import url('unidades.css');
+@import url('componentes.css');</pre>
+                </li>
+                <li>Atualize suas páginas HTML para usar: 
+                    <pre style="background:#2d2d2d;color:#fff;padding:10px;border-radius:5px;margin-top:5px;">&lt;link rel="stylesheet" href="css/main.css"&gt;</pre>
+                </li>
+            </ol>
+        </div>
+        
+        <div class="footer">
+            <p>Ferramenta desenvolvida para Mão Cooperadora © 2023</p>
+        </div>
+    </div>
+
+    <div id="notification" class="notification">
+        Conteúdo copiado para a área de transferência!
+    </div>
+
+    <script>
+        // Dados de exemplo para teste
+        const exemploCSS = `:root {
+  --primary: #00283C;
+  --secondary: #33bbff;
+  --accent: #d7cd0c;
+  --light: #ffffff;
+  --dark: #2d2926;
+}
+
+/* Reset e Base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Rubik', sans-serif;
+  line-height: 1.6;
+  color: var(--dark);
+  background-color: var(--light);
+}
+
+/* Header */
+.main-header {
+  background: var(--light);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  position: sticky;
+  top: 0;
+  z-index: 1001;
+}
+
+.logo img {
+  height: 60px;
+}
+
+/* Banners */
+.banner-rotativo {
+  width: 100%;
+  position: relative;
+  margin-top: 0;
+}
+
+.banner-imagem {
+  position: relative;
+  width: 100%;
+  height: auto;
+  max-height: 475px;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #00283C;
+}
+
+/* Carrossel */
+.carrossel-unidades {
+  background-image: url(assets/backgroundpaper.png);
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  position: relative;
+  left: 0;
+  right: 0;
+  padding: 40px 0;
+  padding-top: 60px;
+  overflow: hidden;
+}
+
+.carrossel-wrapper {
+  display: flex;
+  scroll-snap-type: x mandatory;
+  overflow-x: auto;
+  scroll-behavior: smooth;
+  padding: 0 12% 30px 12%;
+  width: 100%;
+}
+
+/* Seção Unidades */
+.sobre-educacao {
+  padding: 80px 0;
+  background-image: url(assets/backgroundpaper.png);
+}
+
+.sobre-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  grid-template-columns: 1fr 350px;
+  gap: 50px;
+}
+
+/* Componentes */
+.btn {
+  padding: 1.4em 2.8em;
+  font-size: 1.1rem;
+  min-width: 300px;
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: var(--secondary);
+  color: var(--light);
+  border-radius: 4px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+}
+
+.valor-card {
+  text-align: center;
+  padding: 30px 20px;
+  background: var(--light);
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}`;
+
+        // Preencher automaticamente com exemplo
+        document.getElementById('cssCompleto').value = exemploCSS;
+
+        function dividirCSS() {
+            const cssCompleto = document.getElementById('cssCompleto').value;
+            if (!cssCompleto.trim()) {
+                alert('Por favor, cole o CSS primeiro!');
+                return;
+            }
+            
+            // Limpar resultados anteriores
+            const arquivosContainer = document.getElementById('arquivosContainer');
+            arquivosContainer.innerHTML = '';
+            
+            // Dividir o CSS em seções baseado em comentários e seletores
+            const secoes = {
+                'base.css': [],
+                'header.css': [],
+                'banners.css': [],
+                'carrossel.css': [],
+                'unidades.css': [],
+                'componentes.css': []
+            };
+            
+            // Padrões para identificar a qual arquivo cada parte pertence
+            const padroes = {
+                'base.css': [/:root/, /\/\*\s*Reset/, /\*\{/, /html\{/, /body\{/, /font-family:/, /^a\{/, /^img\{/, /\.container\{/],
+                'header.css': [/\.main-header/, /\.menu-toggle/, /\.nav-desktop/, /\.nav-mobile/, /\.dropdown/, /\.top-bar/, /\.logo/, /\.social-icons/, /\.whatsapp-icon/],
+                'banners.css': [/\.banner-rotativo/, /\.banner-imagem/, /\.banner-abas/, /\.aba-btn/, /\.cor-escola/, /\.cor-bolsa/, /\.cor-cardapio/, /\.banner-link/, /\.banner-fixo/],
+                'carrossel.css': [/\.carrossel/, /\.slick-/, /\.glide-/, /\.swiper-/],
+                'unidades.css': [/\.sobre-educacao/, /\.sobre-content/, /\.sobre-texto/, /\.sobre-info/, /\.info-box/, /\.btn-map/, /\.lista-materiais/, /\.materiais-grid/, /\.material-card/, /\.tour-virtual/, /\.video-container/, /\.video-placeholder/, /\.galeria/, /\.galeria-grid/],
+                'componentes.css': [/\.btn/, /\.valor-card/, /\.diferencial-card/, /\.aula-card/, /\.form-matricula/, /\.c-button/, /\.button/, /\.matriculas/, /\.matriculas-info/, /\.info-card/, /\.cardapio-section/, /\.cardapio-content/, /\.proposta-pedagogica-hero/, /\.content-grid/, /\.main-content/, /\.sidebar/, /\.image-gallery/, /\.gallery-item/, /\.footer-redes/, /\.social-icon/, /\.main-footer/, /\.footer-grid/, /\.footer-col/]
+            };
+            
+            // Dividir o CSS em linhas
+            const linhas = cssCompleto.split('\n');
+            let arquivoAtual = 'base.css';
+            let blocoAtual = [];
+            
+            // Processar cada linha
+            for (const linha of linhas) {
+                let linhaProcessada = false;
+                
+                // Verificar se a linha corresponde a algum padrão
+                for (const [arquivo, expressoes] of Object.entries(padroes)) {
+                    for (const expr of expressoes) {
+                        if (expr.test(linha)) {
+                            // Se encontrou um novo padrão, salvar o bloco atual
+                            if (blocoAtual.length > 0) {
+                                secoes[arquivoAtual].push(blocoAtual.join('\n'));
+                                blocoAtual = [];
+                            }
+                            arquivoAtual = arquivo;
+                            linhaProcessada = true;
+                            break;
+                        }
+                    }
+                    if (linhaProcessada) break;
+                }
+                
+                // Adicionar a linha ao bloco atual
+                blocoAtual.push(linha);
+            }
+            
+            // Adicionar o último bloco
+            if (blocoAtual.length > 0) {
+                secoes[arquivoAtual].push(blocoAtual.join('\n'));
+            }
+            
+            // Exibir resultados
+            let contador = 0;
+            
+            for (const [arquivo, conteudos] of Object.entries(secoes)) {
+                if (conteudos.length > 0) {
+                    const conteudoCompleto = conteudos.join('\n\n');
+                    
+                    if (conteudoCompleto.trim()) {
+                        contador++;
+                        
+                        const fileCard = document.createElement('div');
+                        fileCard.className = 'file-card';
+                        
+                        fileCard.innerHTML = `
+                            <div class="file-header">
+                                <div class="file-name">${arquivo}</div>
+                            </div>
+                            <div class="file-content">${conteudoCompleto.substring(0, 300)}${conteudoCompleto.length > 300 ? '...' : ''}</div>
+                            <div class="file-actions">
+                                <button class="copy-btn" data-content="${conteudoCompleto.replace(/"/g, '&quot;')}">
+                                    <svg width="14" height="14" fill="currentColor" viewBox="0 0 16 16">
+                                        <path d="M4 1.5H3a2 2 0 0 0-2 2V14a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V3.5a2 2 0 0 0-2-2h-1v1h1a1 1 0 0 1 1 1V14a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V3.5a1 1 0 0 1 1-1h1v-1z"/>
+                                        <path d="M9.5 1a.5.5 0 0 1 .5.5v1a.5.5 0 0 1-.5.5h-3a.5.5 0 0 1-.5-.5v-1a.5.5 0 0 1 .5-.5h3zm-3-1A1.5 1.5 0 0 0 5 1.5v1A1.5 1.5 0 0 0 6.5 4h3A1.5 1.5 0 0 0 11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3z"/>
+                                    </svg>
+                                    Copiar
+                                </button>
+                            </div>
+                        `;
+                        
+                        arquivosContainer.appendChild(fileCard);
+                    }
+                }
+            }
+            
+            // Adicionar event listeners aos botões de copiar
+            document.querySelectorAll('.copy-btn').forEach(btn => {
+                btn.addEventListener('click', function() {
+                    const conteudo = this.getAttribute('data-content');
+                    copiarConteudo(conteudo);
+                });
+            });
+            
+            document.getElementById('contadorArquivos').textContent = `${contador} arquivos`;
+            document.getElementById('resultado').style.display = 'block';
+            
+            // Scroll para resultados
+            document.getElementById('resultado').scrollIntoView({ behavior: 'smooth' });
+        }
+        
+        function copiarConteudo(conteudo) {
+            // Criar área de transferência temporária
+            const textarea = document.createElement('textarea');
+            textarea.value = conteudo;
+            document.body.appendChild(textarea);
+            textarea.select();
+            
+            try {
+                document.execCommand('copy');
+                mostrarNotificacao('Conteúdo copiado para a área de transferência!');
+            } catch (err) {
+                console.error('Erro ao copiar:', err);
+                alert('Erro ao copiar. Por favor, copie manualmente.');
+            }
+            
+            document.body.removeChild(textarea);
+        }
+        
+        function mostrarNotificacao(mensagem) {
+            const notification = document.getElementById('notification');
+            notification.textContent = mensagem;
+            notification.classList.add('show');
+            
+            setTimeout(() => {
+                notification.classList.remove('show');
+            }, 3000);
+        }
+        
+        function limpar() {
+            document.getElementById('cssCompleto').value = '';
+            document.getElementById('resultado').style.display = 'none';
+        }
+    </script>
+</body>
+</html>

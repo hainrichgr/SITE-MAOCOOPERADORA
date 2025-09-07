@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mão Cooperadora - Educação Transformadora</title>
+  <meta name="description" content="Cooperadora educacional com unidades em Piraquara, Uberaba e Lindoia">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');</style>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap');</style>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');</style>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');</style>
+  <link rel="icon" href="assets/faviconescola.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/faviconescola.ico" type="image/x-icon">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <!-- Preloader from Uiverse.io -->
+<div id="preloader">
+  <div class="loader">
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+  </div>
+</div>
+<!-- End Preloader -->
+
+<header class="main-header">
+  <!-- Logo -->
+  <a href="index.html" class="logo">
+    <img src="assets/logopngnofund.png" alt="Mão Cooperadora">
+  </a>
+
+  <!-- 1) Botão “hambúrguer” -->
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <!-- 2) Menu Desktop (links para seções internas) -->
+  <nav class="nav-desktop">
+    <ul class="nav-menu">
+      <li><a href="#inicio">INÍCIO</a></li>
+      <li><a href="#unidades">UNIDADES</a></li>
+      <li><a href="#historia">NOSSA HISTÓRIA</a></li>
+      <li><a href="#valores">VALORES</a></li>
+      <li><a href="propostapedagogica.html">PROPOSTA PEDAGÓGICA</a></li>
+      <li><a href="#diferenciais">DIFERENCIAIS</a></li>
+    </ul>
+  </nav>
+
+  <!-- 3) Botão “X” de fechar (invisível até o menu abrir) -->
+  <button id="closeMenu" class="close-menu" aria-label="Fechar menu">✕</button>
+
+  <!-- 4) Overlay (fundo semitransparente, invisível até ativar) -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- 5) Menu Mobile (links para páginas separadas) -->
+  <nav class="nav-mobile">
+    <ul>
+      <li><a href="index.html">INÍCIO</a></li>
+      <li><a href="historiamc.html">QUEM SOMOS</a></li>
+      <li><a href="unidades.html">UNIDADES</a></li>
+      <li><a href="propostapedagogica.html">PROPOSTA PEDAGÓGICA</a></li>
+      <li><a href="#valores">VALORES</a></li>
+      <li><a href="#diferenciais">DIFERENCIAIS</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+    <div id="inicio"></div>
+      <!-- Banner Fixo -->
+<div class="banner-fixo">
+  <picture>
+    <source media="(max-width: 768px)" srcset="assets/mainbannermob.png">
+    <img src="assets/indexbanner.png" alt="Mão Cooperadora" class="banner-desktop">
+  </picture>
+</div>
+
+<!-- Unidades -->
+<section class="carrossel-unidades" id="unidades">
+    <h2>Nossas Unidades</h2>
+  <div class="carrossel-wrapper">
+    <div class="carrossel-card" style="background-image: url('assets/faixadaescola.jpeg')">
+      <div class="carrossel-info">
+        <h2>Piraquara</h2>
+        <p>Ensino Fundamental</p>
+        <div class="carrossel-buttons">
+          <a href="fundamental.html">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carrossel-card" style="background-image: url('assets/piraquarafrente.jpeg')">
+      <div class="carrossel-info">
+        <h2>Piraquara</h2>
+        <p>Educação Infantil</p>
+        <div class="carrossel-buttons">
+          <a href="piraquara.html">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carrossel-card" style="background-image: url('assets/uberaba.png')">
+      <div class="carrossel-info">
+        <h2>Uberaba</h2>
+        <p>Educação Infantil</p>
+        <div class="carrossel-buttons">
+          <a href="uberaba.html">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+
+    <div class="carrossel-card" style="background-image: url('assets/lindoia.jpeg')">
+      <div class="carrossel-info">
+        <h2>Lindóia</h2>
+        <p>Educação Infantil</p>
+        <div class="carrossel-buttons">
+          <a href="lindoia.html">Saiba Mais</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="carrossel-dots">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+</section>
+
+    <!-- Seção História -->
+    <section id="historia" class="historia">
+      <div class="container">
+        <article class="historia-content">
+          <div class="historia-text">
+            <h2>Nossa História</h2>
+            <p>Somos a Mão Cooperadora porque temos o intuito de ajudar, contribuir, cooperar para o bem-estar e educação das nossas crianças. Para nós todas as crianças são importantes. Desde a nossa fundação, em 1975, procuramos sempre ajudar as de menores recursos, atendendo com qualidade e igualdade a todas elas. Fazemos o nosso trabalho com carinho e dedicação e para nós, a parceria com a família é prioridade.</p>
+
+            <p>Durante todos esses anos de trabalho percebemos que podemos ser e somos uma influência positiva nas familias e nas comunidades onde há uma MÃO COOPERADORA. Tornamo-nos referência de bom serviço e atendimento nos bairros onde estamos inseridos, além do reconhecimento dos órgãos públicos.</p>
+            
+            <div class="botao-historia">
+  <button class="c-button c-button--gooey" onclick="location.href='historiamc.html'">
+    Nos conheça melhor
+    <div class="c-button__blobs">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </button>
+
+  <!-- SVG necessário para o efeito gooey -->
+  <svg xmlns="http://www.w3.org/2000/svg" version="1.1" style="display: block; height: 0; width: 0;">
+    <defs>
+      <filter id="goo">
+        <feGaussianBlur in="SourceGraphic" stdDeviation="10" result="blur"></feGaussianBlur>
+        <feColorMatrix in="blur" mode="matrix"
+          values="1 0 0 0 0  
+                  0 1 0 0 0  
+                  0 0 1 0 0  
+                  0 0 0 18 -7" result="goo"></feColorMatrix>
+        <feBlend in="SourceGraphic" in2="goo"></feBlend>
+      </filter>
+    </defs>
+  </svg>
+</div>
+</div>      
+
+          <div class="historia-image">
+            <img src="assets/DSC09857.JPG" alt="Foto histórica da escola Mão Cooperadora">
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- Seção Valores -->
+    <section id="valores" class="valores">
+      <div class="container">
+        <h2>Nossos Valores</h2>
+        <div class="valores-grid">
+          <div class="valor-card">
+            <i class="fas fa-heart"></i>
+            <h3>Respeito</h3>
+            <p> Cultivamos o respeito por todas as pessoas, reconhecendo a dignidade de cada indivíduo como criação divina.</p>
+          </div>
+
+          <div class="valor-card">
+        <i class="fas fa-church"></i>
+        <h3>Fé Cristã</h3>
+        <p>Baseamos nossa educação nos princípios cristãos, formando cidadãos com valores sólidos e caráter íntegro.</p>
+      </div>
+          
+          <div class="valor-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Ética</h3>
+            <p>Agimos com integridade em todas as nossas relações, seguindo os princípios bíblicos de justiça e honestidade.</p>
+          </div>
+          
+          <div class="valor-card">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Inovação</h3>
+            <p>Buscamos métodos educacionais criativos e tecnologias atualizadas, alinhando progresso com valores eternos.</p>
+         </div>
+          
+          <div class="valor-card">
+            <i class="fas fa-hands-helping"></i>
+            <h3>Solidariedade</h3>
+            <p>Praticamos o amor ao próximo através de ações sociais e formação de uma comunidade escolar acolhedora.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+<!-- Seção Proposta Pedagógica -->
+    <aside class="barra-formacao">
+  <div class="conteudo-barra">
+    <div class="texto-barra">
+      <h3>Educação que transforma vidas</h3>
+      <p>Da Educação Infantil ao Ensino Fundamental cultivando valores</p>
+      <a href="propostapedagogica.html" class="botao-proposta">Conheça nossa proposta pedagógica</a>
+    </div>
+
+     <div class="decoracao-quebracabeca">
+      <img src="assets/quebracabeca.png" alt="Quebra-cabeça decorativo">
+    </div>
+
+    <div class="imagem-barra">
+      <img src="assets/fotoatvcontraturno4.png" alt="Crianças felizes">
+    </div>
+  </div>
+</aside>
+
+
+    <!-- Seção Diferenciais -->
+    <section id="diferenciais" class="diferenciais">
+      <div class="container">
+        <h2>Nossos Diferenciais</h2>
+        <div class="diferenciais-grid">
+          <div class="diferencial-card">
+            <i class="fas fa-graduation-cap"></i>
+            <h3>Corpo Docente</h3>
+            <p>Professores especializados e mestres em educação</p>
+          </div>
+          <div class="diferencial-card">
+            <i class="fas fa-flask"></i>
+            <h3>Infraestrutura</h3>
+            <p>Laboratórios modernos e espaços de aprendizagem inovadores</p>
+          </div>
+          <div class="diferencial-card">
+            <i class="fas fa-book"></i>
+            <h3>Metodologia</h3>
+            <p>Abordagem pedagógica centrada no desenvolvimento integral</p>
+          </div>
+          <div class="diferencial-card">
+            <i class="fas fa-users"></i>
+            <h3>Comunidade</h3>
+            <p>Forte parceria entre escola, alunos e famílias</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Depoimentos com Trustindex -->
+<section id="depoimentos" class="depoimentos">
+  <h2>Confira o que falam de nós!</h2>
+  <!-- Widget -->
+  <div class="ti-widget" data-widget-id="086e11653a49353ec616c64fabd"></div>
+  <!-- Script COM a chave na URL -->
+  <script src="https://cdn.trustindex.io/loader.js?086e11653a49353ec616c64fabd"></script>
+</section>
+
+  </main>
+
+  <!-- Rodapé -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/bonecosmc.png" alt="Mão Cooperadora" class="footer-logo">
+          <p>“Ensina a criança no caminho em que deve andar, e, ainda quando for velho, não se desviará dele.” Provérbios 22:6.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Unidades</h3>
+          <ul>
+            <li><a href="piraquara.html">Piraquara Educação Infantil</a></li>
+            <li><a href="fundamental.html">Piraquara Ensino Fundamental</a></li>
+            <li><a href="uberaba.html">Uberaba</a></li>
+            <li><a href="lindoia.html">Lindoia</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Links Úteis</h3>
+          <ul>
+            <li><a href="#historia">Nossa História</a></li>
+            <li><a href="#valores">Valores</a></li>
+            <li><a href="#diferenciais">Diferenciais</a></li>
+            <li><a href="https://www.igrejadedeusconid.com/inicio">Conheça a Igreja de Deus</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contato</h3>
+          <ul>
+            <li><i class="fas fa-envelope"></i> contato@maocooperadora.org</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy;  Mão Cooperadora. Todos os direitos reservados.</p>
+      </div>
+    </div>
+    <a href="#" class="back-to-top" aria-label="Voltar ao topo">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+  </footer>
+
+  <!-- Schema Markup -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "EducationalOrganization",
+    "name": "Mão Cooperadora",
+    "url": "https://www.maocooperadora.org",
+    "logo": "https://www.maocooperadora.org/assets/logo-mao-cooperadora.png",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Rua Joaquim Simões",
+      "addressLocality": "Piraquara",
+      "addressRegion": "PR",
+      "postalCode": "83301-000"
+    },
+    "telephone": "+554112345678",
+    "sameAs": [
+      "https://www.facebook.com/maocooperadora",
+      "https://www.instagram.com/maocooperadora"
+    ]
+  }
+  </script>
+
+
+
+  <script src="script.js"></script>
+
+</body>
+</html>

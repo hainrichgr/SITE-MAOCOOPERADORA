@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Mão Cooperadora - Unidade Lindoia</title>
+  <meta name="description" content="Unidade de Educação Infantil em Lindoia, Curitiba">
+  <link rel="stylesheet" href="style.css">
+  <style>@import url('https://fonts.googleapis.com/css2?family=Gotu&display=swap');</style>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Bubblegum+Sans&display=swap');</style>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Mozilla+Headline:wght@200..700&display=swap');</style>
+  <style>@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');</style>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+  <link rel="icon" href="assets/faviconescola.ico" type="image/x-icon">
+  <link rel="shortcut icon" href="assets/faviconescola.ico" type="image/x-icon">
+</head>
+<body>
+  <!-- Preloader from Uiverse.io -->
+<div id="preloader">
+  <div class="loader">
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+    <div class="loader-square"></div>
+  </div>
+</div>
+<!-- End Preloader -->
+  <!-- Top Bar -->
+  <div class="top-bar">
+    <div class="social-icons">
+      <a href="https://www.facebook.com/maocooperadoralindoia" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+      <a href="#" aria-label="WhatsApp"><i class="fab fa-whatsapp"></i></a>
+      <a href="https://www.instagram.com/maocooperadoralindoia/" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+    </div>
+  </div>
+
+  <!-- Header -->
+     
+<header class="main-header">
+  <!-- Logo -->
+  <a href="index.html" class="logo">
+    <img src="assets/logopngnofund.png" alt="Mão Cooperadora">
+  </a>
+
+  <!-- 1) Botão “hambúrguer” -->
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menu">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </button>
+
+  <!-- 2) Menu Desktop (links para seções internas) -->
+  <nav class="nav-desktop">
+    <ul class="nav-menu">
+      <li><a href="index.html">INÍCIO</a></li>
+      <li><a href="unidades.html">UNIDADES</a></li>
+       <li class="dropdown">
+          <a>
+            A Escola 
+            <img src="assets/down-arrow.png" alt="seta para baixo" class="seta-icon" />
+          </a>
+          <ul class="dropdown-content">
+            <li><a href="#sobre">Sobre Nós</a></li>
+            <li><a href="#tour-virtual">Tour Virtual</a></li>
+            <li><a href="propostapedagogica.html">PROPOSTA PEDAGÓGICA</a></li>
+          </ul>
+        </li>
+      <li><a href="historiamc.html">QUEM SOMOS</a></li>
+      <li><a href="#valores">VALORES</a></li>
+      <li><a href="#cardapio">CARDÁPIO</a></li>
+      <li><a href="#galeria">FOTOS</a></li>
+  </nav>
+
+  <!-- 3) Botão “X” de fechar (invisível até o menu abrir) -->
+  <button id="closeMenu" class="close-menu" aria-label="Fechar menu">✕</button>
+
+  <!-- 4) Overlay (fundo semitransparente, invisível até ativar) -->
+  <div id="overlay" class="overlay"></div>
+
+  <!-- 5) Menu Mobile (links para páginas separadas) -->
+  <nav class="nav-mobile">
+    <ul>
+      <li><a href="index.html">INÍCIO</a></li>
+      <li><a href="historiamc.html">QUEM SOMOS</a></li>
+      <li><a href="unidades.html">UNIDADES</a></li>
+      <li><a href="#cardapio">CARDÁPIO</a></li>
+      <li><a href="propostapedagogica.html">PROPOSTA PEDAGÓGICA</a></li>
+    </ul>
+  </nav>
+</header>
+
+  <main>
+
+  <!-- Banners -->
+ <div class="banner-rotativo">
+  <div class="banner-imagem">
+    <!-- Imagem clicável - A Escola sem link -->
+    <img src="assets/Mão Cooperadora (1).png" alt="Banner A Escola" id="bannerImg">
+    
+    <!-- Link invisível sobre a imagem -->
+    <a href="#" class="banner-link" id="bannerLink"></a>
+  </div>
+
+  <div class="banner-abas">
+    <button class="aba-btn cor-escola active" onclick="trocarBanner(0)">Mão Cooperadora</button>
+    <button class="aba-btn cor-cardapio" onclick="trocarBanner(2)">Cardápio</button>
+    </div>
+</div>
+
+    <!-- Sobre Educação Infantil -->
+    <section class="sobre-educacao" id="sobre">
+      <div class="container">
+        <div class="sobre-content">
+          <div class="sobre-texto">
+            <h2>Centro de Educação Infantil Mão Cooperadora - Lindoia</h2>
+            <p>O Centro de Educação Infantil <strong>Mão Cooperadora</strong> – Lindóia é mantido pelas Obras Sociais e Educacionais da Igreja de Deus no Brasil, associação civil de direito privado sem fins lucrativos ou econômicos, fundada em 10 de junho de 1975.</p>
+
+<p>A mesma é filiada à Igreja de Deus no Brasil, sendo, porém, independente e autônoma, mantendo em suas atividades os mesmos princípios e tendo por finalidade principal a assistência social através de métodos cristãos, sem qualquer discriminação de cor, sexo, nacionalidade, credo religioso ou político.</p>
+
+<p>O Centro de Educação Infantil <strong>Mão Cooperadora</strong> – Lindóia iniciou suas atividades, de forma extraoficial, no antigo Pavilhão da Igreja de Deus no Brasil, no Bairro Fanny, na BR 116 – km 01, nº 200, no dia 15 de fevereiro de 1976, atendendo cinquenta menores na modalidade de semi-internato (CEMIC), sob a direção da Sra. Lilian Weidmann Witt. No ano de 1978, dirigiu a unidade a Sra. Elza Gabsky.</p>
+
+<p>Nos anos de 1979 a 1981, a instituição esteve sob os cuidados do Sr. Helmuth Hinz. De 1981 a 1983, esteve na direção da unidade a Srta. Leni Scheffelmeyer. Dos anos de 1984 a 1988, a Srta. Doris Hinz atuou como diretora. A partir de 2 de março de 1989, inauguraram-se as novas instalações na Rua Américo Vespúcio – Bairro Lindóia, sob a direção de Vera Velocinda Seibel.</p>
+
+<p>Durante o ano de 1990 a 1991, a entidade foi dirigida pela Srta. Eunice Menezes; de 1992 a 1994, pela Sra. Anelori Tierling; de 1995 a 1997, pela Sra. Claudia Kugele dos Santos. Em 1998, reassumiu o trabalho a Sra. Vera Velocinda Seibel, vindo a falecer em março de 2011.</p>
+
+<p>De abril de 2011 a fevereiro de 2012, a unidade foi dirigida pelo Sr. Werner Seibel. De março de 2012 a dezembro de 2013, a Sra. Susana Schroeder Quadros dirigiu a unidade. Atualmente, o CEI está sob a direção de Claudia Rodrigues Lima Mink.</p>
+
+<p>Hoje, atendem-se cerca de 150 crianças de 2 a 5 anos, com a mesma finalidade de educar para a cidadania, conforme prescrito nos princípios filosóficos da mantenedora.</p>
+
+        </div>
+          <div class="sobre-info">
+            <div class="info-box">
+              <i class="fas fa-user-tie"></i>
+              <h3>Diretora</h3>
+              <p>Claudia Rodrigues Lima Mink</p>
+            </div>
+            <div class="info-box">
+              <i class="fas fa-phone"></i>
+              <h3>Telefone</h3>
+              <p>(41) 3247-7040</p>
+            </div>
+            <div class="info-box">
+              <i class="fas fa-envelope"></i>
+              <h3>E-mail</h3>
+              <p>lindoia@maocooperadora.org</p>
+            </div>
+            <div class="info-box">
+              <i class="fas fa-map-marker-alt"></i>
+              <h3>Endereço</h3>
+              <p>R. Américo Vespúcio, 34 - Lindoia, Curitiba - PR, 82520-300</p>
+            </div>
+            <a href="https://maps.app.goo.gl/CuSm17QgdQZMCd1L7" class="btn-map" target="_blank">
+              <i class="fas fa-directions"></i> Como chegar
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Seção Valores -->
+    <section id="valores" class="valores">
+      <div class="container">
+        <h2>Nossos Valores</h2>
+        <div class="valores-grid">
+          <div class="valor-card">
+            <i class="fas fa-heart"></i>
+            <h3>Respeito</h3>
+            <p> Cultivamos o respeito por todas as pessoas, reconhecendo a dignidade de cada indivíduo como criação divina.</p>
+          </div>
+
+          <div class="valor-card">
+        <i class="fas fa-church"></i>
+        <h3>Fé Cristã</h3>
+        <p>Baseamos nossa educação nos princípios cristãos, formando cidadãos com valores sólidos e caráter íntegro.</p>
+      </div>
+          
+          <div class="valor-card">
+            <i class="fas fa-shield-alt"></i>
+            <h3>Ética</h3>
+            <p>Agimos com integridade em todas as nossas relações, seguindo os princípios bíblicos de justiça e honestidade.</p>
+          </div>
+          
+          <div class="valor-card">
+            <i class="fas fa-lightbulb"></i>
+            <h3>Inovação</h3>
+            <p>Buscamos métodos educacionais criativos e tecnologias atualizadas, alinhando progresso com valores eternos.</p>
+        </div>
+          
+          <div class="valor-card">
+            <i class="fas fa-hands-helping"></i>
+            <h3>Solidariedade</h3>
+            <p>Praticamos o amor ao próximo através de ações sociais e formação de uma comunidade escolar acolhedora.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+<!-- Seção Cardápio com Vídeo -->
+<section class="cardapio-section" id="cardapio">
+  <div class="video-container">
+    <video autoplay muted loop playsinline webkit-playsinline>
+      <source src="assets/cardapiovideo.mp4" type="video/mp4">
+      <!-- Fallback para navegadores que não suportam vídeo -->
+      Seu navegador não suporta vídeos HTML5. <a href="assets/cardapio.pdf">Acesse o cardápio aqui</a>.
+    </video>
+    
+    <div class="video-overlay"></div>
+    
+    <div class="cardapio-content">
+      <h2 class="cardapio-title">Cardápio Escolar</h2>
+      <p class="cardapio-description">Alimentação saudável e balanceada</p>
+      <a href="assets/cardapiopiraquara.pdf" class="cardapio-button" target="_blank">
+        Ver Cardápio Completo
+        <i class="fas fa-external-link-alt"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+    
+
+    <!-- Tour Virtual -->
+    <section class="tour-virtual" id="tour-virtual">
+      <div class="container">
+        <h2>Tour Virtual</h2>
+        <div class="video-container">
+          <div class="video-placeholder">
+            <i class="fas fa-video"></i>
+            <p>Em breve nosso tour virtual</p>
+            <!-- Espaço reservado para o vídeo do YouTube -->
+            <!-- <iframe src="https://www.youtube.com/embed/..." frameborder="0" allowfullscreen></iframe> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Galeria de Fotos -->
+    <section class="galeria" id="galeria">
+      <div class="container">
+        <h2>Galeria de Fotos</h2>
+        <div class="galeria-grid">
+          <img src="assets/lindoiafoto1.jpeg" alt="Atividades Infantil">
+          <img src="assets/lindoiafoto2.jpeg" alt="Espaços Educacionais">
+          <img src="assets/lindoiafoto3.jpeg" alt="Brinquedoteca">
+          <img src="assets/lindoiafoto4.jpeg" alt="Parque Infantil">
+          <img src="assets/lindoiafoto5.jpeg" alt="Aula de Música">
+          <img src="assets/lindoiafoto6.jpeg" alt="Eventos Escolares">
+          <img src="assets/lindoiafoto7.jpeg" alt="Eventos Escolares">
+          <img src="assets/lindoiafoto8.jpeg" alt="Eventos Escolares">
+        </div>
+      </div>
+    </section>
+    
+  </main>
+
+   <!-- Footer Redes Sociais -->
+  <footer class="footer-redes">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-social">
+                <a href="https://www.facebook.com/maocooperadoralindoia" target="_blank" class="social-icon facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/maocooperadoralindoia/" target="_blank" class="social-icon instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="mailto:lindoia@maocooperadora.org" class="social-icon email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+            </div>
+            </div>
+            </footer>
+
+  <!-- Footer -->
+  <footer class="main-footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-col">
+          <img src="assets/bonecosmc.png" alt="Mão Cooperadora" class="footer-logo">
+          <p>“Ensina a criança no caminho em que deve andar, e, ainda quando for velho, não se desviará dele.” Provérbios 22:6.</p>
+        </div>
+        <div class="footer-col">
+          <h3>Unidades</h3>
+          <ul>
+            <li><a href="piraquara.html">Piraquara Educação Infantil</a></li>
+            <li><a href="fundamental.html">Piraquara Ensino Fundamental</a></li>
+            <li><a href="uberaba.html">Uberaba</a></li>
+            <li><a href="lindoia.html">Lindoia</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Links Úteis</h3>
+          <ul>
+            <li><a href="historiamc.html">Nossa História</a></li>
+            <li><a href="#valores">Valores</a></li>
+            <li><a href="index.html#diferenciais">Diferenciais</a></li>
+            <li><a href="https://www.igrejadedeusconid.com/inicio">Conheça a Igreja de Deus</a></li>
+          </ul>
+        </div>
+        <div class="footer-col">
+          <h3>Contato</h3>
+          <ul>
+            <li><i class="fas fa-phone"></i> (41) 3247-7040</li>
+            <li><i class="fas fa-envelope"></i>lindoia@maocooperadora.org"</li>
+            <li><i class="fas fa-map-marker-alt"></i> R. Américo Vespúcio, 34 - Lindoia, Curitiba - PR, 82520-300</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy;Mão Cooperadora. Todos os direitos reservados.</p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Preloader HTML -->
+  <div id="preloader" class="hidden">
+    <div class="spinner"></div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
